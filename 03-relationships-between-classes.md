@@ -192,3 +192,13 @@ int int_y = (int) y;
 ```
 
 When we cast objects, we essentially 're-label' the type, but otherwise leave it unchanged. However, when we cast primitives, we're adjusting the value of the variable itself: the changes may potentially be irreversible!
+
+## 3.6. Relationship definitions
+In general, "implements" means "provides code for". To "extend" something in Java is to be connected in a way that involves inheritance.
+
+e.g. an Interface can extend another Interface, but cannot implement another Interface. 
+```java
+interface Mammal{}
+interface Female{}
+interface Dog extends Mammal,Female {}
+
