@@ -212,6 +212,7 @@ ArrayList:
 Why Use List<String> instead of ArrayList<String>?
 This is an example of using polymorphism. You declare al as a List<String>, but you initialize it with new ArrayList<String>(). By doing this, your code is more flexible. You can change the implementation of List (e.g., use a LinkedList or another class that implements List) without modifying the rest of the code.
 
+<>: This is the diamond operator, introduced in Java 7, which allows you to omit the type parameter on the right side of the expression if it's the same as the one declared on the left side. Since al is declared as List<String>, the type inside ArrayList is inferred to be String
 
 ## 4.5. Collections
 
