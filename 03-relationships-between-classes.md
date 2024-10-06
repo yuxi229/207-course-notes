@@ -81,6 +81,8 @@ For example, suppose we're writing a program to simulate plants. We would have a
 
 In cases where we want to define a property of a class, we can use interfaces. Interfaces are similar to classes, except they have no implementation details at all: only method signatures! They can also have variables, but these variables must be `static` and `final`. In addition, **everything** in an interface must be `public`.
 
+- Static methods in interfaces should have a body.
+
 
 For our example, we would define an `Edible` interface such as:
 ```java
@@ -110,6 +112,23 @@ interface Steamable extends Edible {
 ```
 
 Any class that `implements Steamable` must then have both a `steam` and `eat` method!
+
+Implementing multiple Interfaces:
+```java
+public class DogCat implements Dog, Cat {
+  public void bark() {
+    System.out.println("Bow-meow");
+  }
+}
+```
+Consider the code:
+```java
+
+DogCat x = new DogCat();
+```
+There is no way to call the Dog version of the bark method or the Cat version. All we can do is call x.bark() which creates ambiguity. The Java Virtual Machine will not be able to figure out which version of the method to execute.
+
+
 
 
 ## 3.3. super
