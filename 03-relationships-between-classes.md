@@ -1,5 +1,6 @@
 # Chapter 3: Relationships between Classes
 
+
 ## 3.1. Inheritance
 You may recall that we could inherit methods from another class in Python as follows:
 ```python
@@ -62,6 +63,18 @@ class Child extends Parent {
 ```
 
 ## 3.2. Interfaces
+
+### 3.2.1 Relationship definitions
+In general, "implements" means "provides code for". To "extend" something in Java is to be connected in a way that involves inheritance.
+
+e.g. an Interface can extend another Interface, but cannot implement another Interface. 
+```java
+interface Mammal{}
+interface Female{}
+interface Dog extends Mammal,Female {}
+```
+
+### 3.2.1 Interfaces
 In Java, you can only extend a single class: you have one parent class, and that's it! However, sometimes we want to describe more behaviours for a class in a way that just one parent won't suffice.
 
 For example, suppose we're writing a program to simulate plants. We would have a class called `Plant`: all `Plant`s are able to `breathe` and `grow`! We could also have subclasses such as `Wheat` and `Flower`s with their own subclasses. However, suppose we want to indicate that some plants are edible for humans: for instance `Corn` would have an `eat` method, and so would `Basil`. Not all plants are edible, so we can't add that method to `Plant`. We *could* define an `EdiblePlant` class, but then we would also need `EdibleWheat`, `EdibleFlower`, and so on: this isn't a very clean solution!
@@ -193,12 +206,5 @@ int int_y = (int) y;
 
 When we cast objects, we essentially 're-label' the type, but otherwise leave it unchanged. However, when we cast primitives, we're adjusting the value of the variable itself: the changes may potentially be irreversible!
 
-## 3.6. Relationship definitions
-In general, "implements" means "provides code for". To "extend" something in Java is to be connected in a way that involves inheritance.
 
-e.g. an Interface can extend another Interface, but cannot implement another Interface. 
-```java
-interface Mammal{}
-interface Female{}
-interface Dog extends Mammal,Female {}
 
