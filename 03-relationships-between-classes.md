@@ -74,7 +74,7 @@ interface Female{}
 interface Dog extends Mammal,Female {}
 ```
 
-### 3.2.1 Interfaces
+### 3.2.2 Interfaces
 In Java, you can only extend a single class: you have one parent class, and that's it! However, sometimes we want to describe more behaviours for a class in a way that just one parent won't suffice.
 
 For example, suppose we're writing a program to simulate plants. We would have a class called `Plant`: all `Plant`s are able to `breathe` and `grow`! We could also have subclasses such as `Wheat` and `Flower`s with their own subclasses. However, suppose we want to indicate that some plants are edible for humans: for instance `Corn` would have an `eat` method, and so would `Basil`. Not all plants are edible, so we can't add that method to `Plant`. We *could* define an `EdiblePlant` class, but then we would also need `EdibleWheat`, `EdibleFlower`, and so on: this isn't a very clean solution!
