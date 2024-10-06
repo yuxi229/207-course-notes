@@ -189,6 +189,30 @@ We can add as many generics as we want (e.g. `MyItem<T1, T2, T3, ...>`) and even
 
 You can read a much more in-depth explanation of Generics in the Java documentation. A simple tutorial is available [here](https://docs.oracle.com/javase/tutorial/java/generics/index.html), where you can use the `Next »` to step through.
 
+```java
+1. public class MyList {
+2.   // Solution code:
+3.   static List<String> createStringList () {
+4.     List<String> al = new ArrayList<>();
+5.     al.add("string1");
+6.     return al;
+7.   }
+8. }
+```
+List:
+- List is an interface
+- List interface extends the Collection framework	
+- List cannot be instantiated
+
+ArrayList:
+- ArrayList is a class
+- ArrayList extends AbstractList class and implements List interface
+- ArrayList can be instantiated
+
+Why Use List<String> instead of ArrayList<String>?
+This is an example of using polymorphism. You declare al as a List<String>, but you initialize it with new ArrayList<String>(). By doing this, your code is more flexible. You can change the implementation of List (e.g., use a LinkedList or another class that implements List) without modifying the rest of the code.
+
+
 ## 4.5. Collections
 
 A collection is an object that represents a group of objects. For example, a stack is a collection, as is a set or a vector. Java defines an interface called Collection that defines the operations that any collection should offer, including operations to add and remove items, and to find out the number of items in the collection.
