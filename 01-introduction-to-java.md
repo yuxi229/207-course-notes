@@ -603,6 +603,15 @@ String s = (String) miscellany[1];
 
 This code generates the error `java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String`.
 
+```java
+ArrayList<String> cars = new ArrayList<String>();
+cars.add("BMW");
+cars.get(0);
+cars.set(0, "Opel");
+cars.remove(0);
+```
+
+
 ### 1.6.6. Two-dimensional arrays
 We can create arrays with multiple dimensions. For instance, here we define an array whose elements are themselves of type array (of `int`).
 
